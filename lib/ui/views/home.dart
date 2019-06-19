@@ -7,6 +7,7 @@ import 'package:food_delivery_app_crio/ui/views/menu.dart';
 import 'package:food_delivery_app_crio/ui/widgets/appBar.dart';
 // import '../../core/viewmodels/base_model.dart';
 import './base_view.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -21,7 +22,8 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         body: model.state == ViewState.Busy
             ? Center(
-                child: CircularProgressIndicator(),
+                // child: CircularProgressIndicator(),
+                child: SpinKitChasingDots(color: Color(0xfffd5f00)),
               )
             : SafeArea(
                 child: Column(

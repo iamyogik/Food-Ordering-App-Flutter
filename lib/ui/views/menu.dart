@@ -76,7 +76,7 @@ class _MenuState extends State<Menu> {
         backgroundColor: Colors.white,
         body: model.state == ViewState.Busy
             ? Center(
-                child: CircularProgressIndicator(),
+                child: SpinKitChasingDots(color: Color(0xfffd5f00)),
               )
             : SafeArea(
                 child: Stack(
@@ -130,7 +130,7 @@ class _MenuState extends State<Menu> {
 
                                 SizedBox(
                                   height: 80,
-                                );
+                                ),
                               ]),
                         ),
                       ],

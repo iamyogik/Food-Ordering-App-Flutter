@@ -65,7 +65,7 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage> {
           child: 
           model.state == ViewState.Busy ?
           Center(
-            child: CircularProgressIndicator(),
+            child: SpinKitChasingDots(color: Color(0xfffd5f00)),
           )
           :
           orderStatusScreen(model.orderData, model),
@@ -339,7 +339,7 @@ Widget orderStatusScreen(data, model){
 
           Center(
             child: Text(
-              model.preprationTime.toString(),
+              model.orderData.orderedOn,
               style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
                   fontSize: 18,
@@ -531,7 +531,7 @@ Widget orderStatusScreen(data, model){
 
           Center(
             child: Text(
-              "Jun 18, 2019 at 3:47 PM",
+              model.orderData.orderedOn,
               style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
                   fontSize: 18,
@@ -783,7 +783,7 @@ Widget orderStatusScreen(data, model){
 
           Center(
             child: Text(
-              "Jun 18, 2019 at 3:47 PM",
+              model.orderData.orderedOn,
               style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
                   fontSize: 18,
@@ -947,7 +947,7 @@ Widget orderStatusScreen(data, model){
 
           Center(
             child: Text(
-              "Jun 18, 2019 at 3:47 PM",
+              model.orderData.orderedOn,
               style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
                   fontSize: 18,
@@ -1119,7 +1119,7 @@ Widget orderStatusScreen(data, model){
 
           Center(
             child: Text(
-              "Jun 18, 2019 at 3:47 PM",
+              model.orderData.orderedOn,
               style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
                   fontSize: 18,
@@ -1371,7 +1371,7 @@ Widget orderStatusScreen(data, model){
 
           Center(
             child: Text(
-              "Jun 18, 2019 at 3:47 PM",
+              model.orderData.orderedOn,
               style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
                   fontSize: 18,

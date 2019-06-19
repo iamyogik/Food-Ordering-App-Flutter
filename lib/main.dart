@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery_app_crio/ui/views/home.dart';
 import 'package:food_delivery_app_crio/ui/views/menu.dart';
 import 'package:food_delivery_app_crio/ui/views/order_confirmation.dart';
+import 'package:food_delivery_app_crio/ui/views/spash.dart';
 import './core/services/localstorage_service.dart';
 import './core/viewmodels/login_model.dart';
 import './locator.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: Menu(restaurantId: "5d07d72aaace2b00085bd71d",),
       // home: OrderConfirmationPage(orderId: "5d08072955d61889804b9de0",),
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }
