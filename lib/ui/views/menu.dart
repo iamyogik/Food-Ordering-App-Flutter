@@ -31,8 +31,8 @@ class _MenuState extends State<Menu> {
     String jsonStr = """{
                 "userId":"dummy",
                 "restaurantId": "${widget.restaurantId}",
-                "items": [] 
-                
+                "items": []
+
                 }""";
 
     var result = json.decode(jsonStr);
@@ -154,12 +154,12 @@ class _MenuState extends State<Menu> {
                                     if(!orderNowButton){
                                       await sendNewOrder(model, context);
                                     }
-                                    
+
                                   },
                                   color: Color(0xffFD792B),
                                   child: orderNowButton
-                                      ? 
-                                      
+                                      ?
+
                                       Container(
                                           width: 100,
                                           height: 22,
@@ -168,8 +168,8 @@ class _MenuState extends State<Menu> {
                                         )
 
 
-                                      : 
-                                      
+                                      :
+
                                       Container(
                                           width: 100,
                                           height: 22,

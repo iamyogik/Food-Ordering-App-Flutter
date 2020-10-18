@@ -21,7 +21,7 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage> {
   Timer timer, timer_once;
   bool cancelButton = false;
 
- 
+
   @override
   void dispose() {
     timer?.cancel();
@@ -37,9 +37,9 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage> {
     setState(() {
       cancelButton = true;
     });
-    
+
     var response = await model.cancelOrder(widget.orderId);
-    
+
      setState(() {
       cancelButton = false;
     });
@@ -63,7 +63,7 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage> {
         appBar: appBar(context, backAvailable: true),
         backgroundColor: Colors.white,
         body: SafeArea(
-          child: 
+          child:
           model.state == ViewState.Busy ?
           Center(
             child: SpinKitChasingDots(color: Color(0xfffd5f00)),
@@ -77,42 +77,42 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage> {
 
 
 Widget orderStatusScreen(data, model){
-    switch(data.status) { 
-      case "PENDING ": { 
-        return pendingOrder(model);
-      } 
-      break; 
-      
-      case "ACCEPTED": { 
-        return acceptedOrder(model);
-      } 
-      break; 
-      case "REJECTED": { 
-        return rejectedOrder(model);
-      } 
-      break; 
-      case "CANCELLED": { 
-        return cancelledOrder(model);
-      } 
-      break; 
-      case "PREPARING": { 
-        return preparingOrder(model);
-      } 
-      break; 
-      case "READY": { 
-        return readyOrder(model);
-      } 
-      break;
-      case "DISPATCHED": { 
-        return dispatchedOrder(model);
-      } 
-      break; 
-          
-      default: { 
+    switch(data.status) {
+      case "PENDING ": {
         return pendingOrder(model);
       }
-      break; 
-    } 
+      break;
+
+      case "ACCEPTED": {
+        return acceptedOrder(model);
+      }
+      break;
+      case "REJECTED": {
+        return rejectedOrder(model);
+      }
+      break;
+      case "CANCELLED": {
+        return cancelledOrder(model);
+      }
+      break;
+      case "PREPARING": {
+        return preparingOrder(model);
+      }
+      break;
+      case "READY": {
+        return readyOrder(model);
+      }
+      break;
+      case "DISPATCHED": {
+        return dispatchedOrder(model);
+      }
+      break;
+
+      default: {
+        return pendingOrder(model);
+      }
+      break;
+    }
 
 }
 
@@ -244,13 +244,13 @@ Widget orderStatusScreen(data, model){
           //   height: 120,
           // ),
 
-          
+
           Spacer(
             flex: 9,
           ),
 
 
-         
+
           Spacer(
             flex: 3,
           ),
@@ -281,7 +281,7 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
@@ -304,7 +304,7 @@ Widget orderStatusScreen(data, model){
             ),
           ),
 
-       
+
 
           Spacer(
             flex: 5,
@@ -445,7 +445,7 @@ Widget orderStatusScreen(data, model){
             flex: 12,
           ),
 
-          
+
 
           Padding(
             padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
@@ -473,7 +473,7 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
@@ -496,7 +496,7 @@ Widget orderStatusScreen(data, model){
             ),
           ),
 
-       
+
 
           Spacer(
             flex: 5,
@@ -633,7 +633,7 @@ Widget orderStatusScreen(data, model){
           //   height: 120,
           // ),
 
-          
+
           Spacer(
             flex: 9,
           ),
@@ -658,11 +658,11 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
-                          child: 
+                          child:
                           cancelButton
 
                           ?
@@ -670,10 +670,10 @@ Widget orderStatusScreen(data, model){
                             width: 40,
                             child:  SpinKitDoubleBounce(color: Colors.white),
                           )
-                         
-                          
+
+
                           :
-                          
+
                            Text(
                             'CANCEL ORDER',
                             maxLines: 1,
@@ -725,7 +725,7 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
@@ -748,7 +748,7 @@ Widget orderStatusScreen(data, model){
             ),
           ),
 
-       
+
 
           Spacer(
             flex: 5,
@@ -859,8 +859,8 @@ Widget orderStatusScreen(data, model){
             flex: 12,
           ),
 
-          
-         
+
+
 
           Padding(
             padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
@@ -888,7 +888,7 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
@@ -911,7 +911,7 @@ Widget orderStatusScreen(data, model){
             ),
           ),
 
-       
+
 
           Spacer(
             flex: 5,
@@ -1023,7 +1023,7 @@ Widget orderStatusScreen(data, model){
             flex: 3,
           ),
 
-      
+
           // SizedBox(
           //   height: 120,
           // ),
@@ -1032,8 +1032,8 @@ Widget orderStatusScreen(data, model){
             flex: 12,
           ),
 
-          
-          
+
+
 
           Padding(
             padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
@@ -1061,7 +1061,7 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
@@ -1084,7 +1084,7 @@ Widget orderStatusScreen(data, model){
             ),
           ),
 
-       
+
 
           Spacer(
             flex: 5,
@@ -1221,7 +1221,7 @@ Widget orderStatusScreen(data, model){
           //   height: 120,
           // ),
 
-          
+
           Spacer(
             flex: 9,
           ),
@@ -1246,11 +1246,11 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
-                          child: 
+                          child:
                           cancelButton
 
                           ?
@@ -1258,10 +1258,10 @@ Widget orderStatusScreen(data, model){
                             width: 40,
                             child:  SpinKitDoubleBounce(color: Colors.white),
                           )
-                         
-                          
+
+
                           :
-                          
+
                            Text(
                             'CANCEL ORDER',
                             maxLines: 1,
@@ -1313,7 +1313,7 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
@@ -1336,7 +1336,7 @@ Widget orderStatusScreen(data, model){
             ),
           ),
 
-       
+
 
           Spacer(
             flex: 5,
@@ -1468,7 +1468,7 @@ Widget orderStatusScreen(data, model){
             ],
           ),
 
-         
+
 
           Spacer(
             flex: 9,
@@ -1494,11 +1494,11 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
-                          child: 
+                          child:
                           cancelButton
 
                           ?
@@ -1506,10 +1506,10 @@ Widget orderStatusScreen(data, model){
                             width: 40,
                             child:  SpinKitDoubleBounce(color: Colors.white),
                           )
-                         
-                          
+
+
                           :
-                          
+
                            Text(
                             'CANCEL ORDER',
                             maxLines: 1,
@@ -1560,7 +1560,7 @@ Widget orderStatusScreen(data, model){
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      
+
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                         child: Center(
@@ -1583,8 +1583,8 @@ Widget orderStatusScreen(data, model){
             ),
           ),
 
-       
-       
+
+
          Spacer(
             flex: 5,
           ),
