@@ -6,7 +6,6 @@ import 'package:food_delivery_app_crio/ui/views/spash.dart';
 import './core/services/localstorage_service.dart';
 import './core/viewmodels/login_model.dart';
 import './locator.dart';
-import 'ui/views/loginPage.dart';
 import 'ui/widgets/custom_focus_node_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
