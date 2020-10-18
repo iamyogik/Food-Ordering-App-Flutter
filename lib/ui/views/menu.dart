@@ -72,6 +72,7 @@ class _MenuState extends State<Menu> {
       // print(model.getCart().length);
 
       return Scaffold(
+        resizeToAvoidBottomPadding: false,
         appBar: appBar(context, backAvailable: true),
         backgroundColor: Colors.white,
         body: model.state == ViewState.Busy

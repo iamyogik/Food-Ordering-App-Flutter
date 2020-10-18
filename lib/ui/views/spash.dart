@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app_crio/ui/views/home.dart';
 
@@ -33,6 +32,7 @@ void initState() {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: Container(
         child: Image(
           height: double.infinity,

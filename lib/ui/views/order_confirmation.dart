@@ -59,6 +59,7 @@ class _OrderConfirmationPageState extends State<OrderConfirmationPage> {
 
     }, builder: (context, model, child) {
       return Scaffold(
+        resizeToAvoidBottomPadding: false,
         appBar: appBar(context, backAvailable: true),
         backgroundColor: Colors.white,
         body: SafeArea(

@@ -5,6 +5,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
       return Scaffold(
+        resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
@@ -13,10 +14,4 @@ class LoginPage extends StatelessWidget {
         ),
       );
   }
-
-
-
-
-
-
 }
