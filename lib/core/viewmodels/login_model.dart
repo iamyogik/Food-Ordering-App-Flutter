@@ -11,13 +11,13 @@ class LoginModel extends BaseModel {
 
   String errorMessage;
 
-  
+
   // Future<dynamic> facebookLogin() async{
   //   setViewState(ViewState.Busy);
   //   var response = await _authenticationService.facebookLogin();
   //   setViewState(ViewState.Idle);
 
-  
+
   //   Route route;
 
   //   if (response['success']) {
@@ -29,7 +29,7 @@ class LoginModel extends BaseModel {
   //     // print(errorMessage);
   //     return route;
   //   }
- 
+
   // }
 
 
@@ -49,7 +49,7 @@ class LoginModel extends BaseModel {
   //     // print(errorMessage);
   //     return route;
   //   }
- 
+
   // }
 
 
