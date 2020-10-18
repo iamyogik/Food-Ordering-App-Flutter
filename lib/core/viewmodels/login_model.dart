@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../services/localstorage_service.dart';
 import './base_model.dart';
-import '../../ui/views/login.dart';
+import '../../ui/views/loginPage.dart';
 import '../../locator.dart';
 
 class LoginModel extends BaseModel {
